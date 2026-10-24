@@ -26,3 +26,9 @@ mail-vue/dist
 .wrangler
 .venv
 git-tools.js
+
+# Deployment credentials and recovery data stay outside the public fork.
+.dev.vars*
+.private/
+.cache/
+*.sql

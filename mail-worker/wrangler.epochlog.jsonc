@@ -1,0 +1,30 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "cloud-mail-epochlog",
+  "account_id": "239b926426eaaaae973c8467cd92721b",
+  "main": "./src/index.js",
+  "compatibility_date": "2025-06-04",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "mail.epochlog.xyz", "custom_domain": true }],
+  "assets": {
+    "binding": "assets",
+    "directory": "./dist",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": true
+  },
+  "d1_databases": [{
+    "binding": "db",
+    "database_name": "cloud-mail-epochlog",
+    "database_id": "c5adfd66-a3a6-489f-89e9-27861bac592b"
+  }],
+  "kv_namespaces": [{ "binding": "kv", "id": "daa44099a7544416b1f5bdc749d78b1c" }],
+  "triggers": { "crons": ["0 * * * *"] },
+  "vars": {
+    "domain": ["epochlog.xyz"],
+    "admin": "admin@epochlog.xyz",
+    "analysis_cache": false,
+    "orm_log": false
+  },
+  "observability": { "enabled": false }
+}

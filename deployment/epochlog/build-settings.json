@@ -1,0 +1,15 @@
+{
+  "worker": "cloud-mail-epochlog",
+  "repository": "YancyGuo/cloud-mail",
+  "production_branch": "production",
+  "root_directory": "mail-worker",
+  "build_command": "pnpm install --frozen-lockfile --ignore-scripts && pnpm --dir ../mail-vue install --frozen-lockfile --ignore-scripts && pnpm --dir ../mail-vue build",
+  "deploy_command": "pnpm exec wrangler deploy --config wrangler.epochlog.jsonc",
+  "build_variables": {
+    "NODE_VERSION": "22.19.0",
+    "PNPM_VERSION": "11.25.0",
+    "SKIP_DEPENDENCY_INSTALL": "1",
+    "VITE_PWA_NAME": "Epochlog Mail"
+  },
+  "preview_branches_enabled": false
+}
