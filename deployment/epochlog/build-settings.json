@@ -11,5 +11,10 @@
     "SKIP_DEPENDENCY_INSTALL": "1",
     "VITE_PWA_NAME": "Epochlog Mail"
   },
-  "preview_branches_enabled": false
+  "preview_branches_enabled": false,
+  "cloudflare": {
+    "worker_tag": "dd40fb29d3d9446181652323f646a2aa",
+    "repo_connection_uuid": "058906fa-b79d-4997-9277-0e001bae50a9",
+    "trigger_uuid": "92b74b7a-ae7c-43dd-b3ee-27afe95a884d"
+  }
 }
